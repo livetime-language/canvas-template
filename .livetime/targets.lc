@@ -1,0 +1,9 @@
+Common
+	Library: git@github.com:livetime-language/core.git
+	Tags: js, 2D, play
+	Technology: Web
+	Rendering: 2D
+	UserCount: 2
+
+Web
+	Platform: Web
