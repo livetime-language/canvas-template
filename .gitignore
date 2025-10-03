@@ -8,3 +8,4 @@
 /assets/blank.html
 /assets/*.js
 /backup/
+.livetime/symbolStates.tsv
