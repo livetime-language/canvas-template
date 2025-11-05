@@ -1,7 +1,7 @@
 {
-  "liveCompilation": true,
-  "currentTarget": "",
-  "buildTargets": [
-    "Web"
-  ]
+	"liveCompilation": true,
+	"currentTarget": "Web",
+	"buildTargets": [
+		"Web"
+	]
 }
