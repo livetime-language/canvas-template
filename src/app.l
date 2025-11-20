@@ -6,6 +6,8 @@ app
 		
 	// Called on every frame (30 times per second)
 	tick
+		drawImage LiveTimeLogo, {0,-55}
+		drawText "Hello World", {0, 55}
 		players.each.tick
 		
 Player
@@ -19,6 +21,6 @@ Player
 		drawVideo me, pos, size:radius*2-75, shape:Circle
 
 		// Draw score
-		Vector2 scorePos = pos + math.getVectorForAngle(.125 turns)*radius
+		Vector2 scorePos = pos + math.getVectorForAngle(.125 turn)*radius
 		drawCircle scorePos, color:Black, outlineColor:color, size:60
 		drawText score, scorePos, size:31

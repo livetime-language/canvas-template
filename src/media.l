@@ -1,5 +1,5 @@
 class Image
-	const Texture atlas = {"atlas-v2.png", size:{1024,1024}}
+	const Texture atlas = {"atlas-v1.png", size:{1024,1024}}
 	global const Image VideoScreen = {"VideoScreen", "lib/core/play/media/VideoScreen0.png", atlas, {444,444}, [{x1:2,y1:2,x2:442,y2:332,w:440,h:330},{x1:2,y1:336,x2:442,y2:776,w:440,h:440}]}
 	global const Image LargeButton = {"LargeButton", "lib/core/play/media/LargeButton.png", atlas, {427,65}, [{x1:446,y1:2,x2:869,y2:63,w:423,h:61}]}
 	global const Image LargeButtonAccent = {"LargeButtonAccent", "lib/core/play/media/LargeButtonAccent1.png", atlas, {427,65}, [{x1:446,y1:132,x2:868,y2:193,w:422,h:61},{x1:446,y1:67,x2:869,y2:128,w:423,h:61}]}
@@ -7,25 +7,26 @@ class Image
 	global const Image ButtonAccent = {"ButtonAccent", "lib/core/play/media/ButtonAccent1.png", atlas, {305,65}, [{x1:446,y1:327,x2:746,y2:388,w:300,h:61},{x1:446,y1:262,x2:747,y2:323,w:301,h:61}]}
 	global const Image SmallButton = {"SmallButton", "lib/core/play/media/SmallButton.png", atlas, {172,45}, [{x1:446,y1:392,x2:614,y2:433,w:168,h:41}]}
 	global const Image SmallButtonAccent = {"SmallButtonAccent", "lib/core/play/media/SmallButtonAccent1.png", atlas, {172,45}, [{x1:446,y1:437,x2:613,y2:478,w:167,h:41},{x1:618,y1:392,x2:786,y2:433,w:168,h:41}]}
-	global const Image finger = {"finger", "lib/core/play/media/finger0.png", atlas, {57,80}, [{x1:446,y1:482,x2:499,y2:558,w:53,h:76},{x1:503,y1:482,x2:556,y2:558,w:53,h:76}]}
-	global const Image Next = {"Next", "lib/core/play/media/Next.png", atlas, {68,68}, [{x1:560,y1:482,x2:624,y2:546,w:64,h:64}]}
-	global const Image ThumbsUp = {"ThumbsUp", "lib/core/play/media/ThumbsUp.png", atlas, {68,68}, [{x1:628,y1:482,x2:692,y2:546,w:64,h:64}]}
-	global const Image Spark = {"Spark", "lib/core/play/media/Spark0.png", atlas, {62,62}, [{x1:751,y1:197,x2:809,y2:255,w:58,h:58},{x1:654,y1:562,x2:702,y2:610,w:48,h:48},{x1:790,y1:392,x2:828,y2:430,w:38,h:38}]}
+	global const Image LiveTimeLogo = {"LiveTimeLogo", "media/LiveTimeLogo.png", atlas, {132,132}, [{x1:446,y1:482,x2:574,y2:610,w:128,h:128}]}
+	global const Image finger = {"finger", "lib/core/play/media/finger0.png", atlas, {57,80}, [{x1:578,y1:482,x2:631,y2:558,w:53,h:76},{x1:635,y1:482,x2:688,y2:558,w:53,h:76}]}
+	global const Image Next = {"Next", "lib/core/play/media/Next.png", atlas, {68,68}, [{x1:692,y1:482,x2:756,y2:546,w:64,h:64}]}
+	global const Image ThumbsUp = {"ThumbsUp", "lib/core/play/media/ThumbsUp.png", atlas, {68,68}, [{x1:760,y1:482,x2:824,y2:546,w:64,h:64}]}
+	global const Image Spark = {"Spark", "lib/core/play/media/Spark0.png", atlas, {62,62}, [{x1:751,y1:197,x2:809,y2:255,w:58,h:58},{x1:550,y1:614,x2:598,y2:662,w:48,h:48},{x1:790,y1:392,x2:828,y2:430,w:38,h:38}]}
 	global const Image Back = {"Back", "lib/core/play/media/Back.png", atlas, {52,52}, [{x1:813,y1:197,x2:861,y2:245,w:48,h:48}]}
 	global const Image cameraIcon = {"cameraIcon", "lib/core/play/media/cameraIcon.png", atlas, {52,52}, [{x1:751,y1:262,x2:799,y2:310,w:48,h:48}]}
 	global const Image Checkbox = {"Checkbox", "lib/core/play/media/Checkbox0.png", atlas, {52,52}, [{x1:803,y1:262,x2:851,y2:310,w:48,h:48},{x1:750,y1:327,x2:798,y2:375,w:48,h:48}]}
-	global const Image Help = {"Help", "lib/core/play/media/Help0.png", atlas, {52,52}, [{x1:802,y1:327,x2:850,y2:375,w:48,h:48},{x1:696,y1:482,x2:744,y2:530,w:48,h:48}]}
-	global const Image Menu = {"Menu", "lib/core/play/media/Menu.png", atlas, {52,52}, [{x1:748,y1:482,x2:796,y2:530,w:48,h:48}]}
-	global const Image microphoneIcon = {"microphoneIcon", "lib/core/play/media/microphoneIcon.png", atlas, {52,52}, [{x1:800,y1:482,x2:848,y2:530,w:48,h:48}]}
-	global const Image New = {"New", "lib/core/play/media/New.png", atlas, {52,52}, [{x1:446,y1:562,x2:494,y2:610,w:48,h:48}]}
-	global const Image Quit = {"Quit", "lib/core/play/media/Quit.png", atlas, {52,52}, [{x1:498,y1:562,x2:546,y2:610,w:48,h:48}]}
-	global const Image Save = {"Save", "lib/core/play/media/Save.png", atlas, {52,52}, [{x1:550,y1:562,x2:598,y2:610,w:48,h:48}]}
-	global const Image settingsIcon = {"settingsIcon", "lib/core/play/media/settingsIcon.png", atlas, {52,52}, [{x1:602,y1:562,x2:650,y2:610,w:48,h:48}]}
-	global const Image speakerIcon = {"speakerIcon", "lib/core/play/media/speakerIcon.png", atlas, {52,52}, [{x1:706,y1:562,x2:754,y2:610,w:48,h:48}]}
-	global const Image starParticle = {"starParticle", "lib/core/play/media/starParticle2.png", atlas, {52,48}, [{x1:498,y1:614,x2:524,y2:638,w:26,h:24},{x1:855,y1:262,x2:865,y2:272,w:10,h:10},{x1:758,y1:562,x2:806,y2:606,w:48,h:44}]}
-	global const Image Tutorial = {"Tutorial", "lib/core/play/media/Tutorial.png", atlas, {52,52}, [{x1:446,y1:614,x2:494,y2:662,w:48,h:48}]}
+	global const Image Help = {"Help", "lib/core/play/media/Help0.png", atlas, {52,52}, [{x1:802,y1:327,x2:850,y2:375,w:48,h:48},{x1:578,y1:562,x2:626,y2:610,w:48,h:48}]}
+	global const Image Menu = {"Menu", "lib/core/play/media/Menu.png", atlas, {52,52}, [{x1:630,y1:562,x2:678,y2:610,w:48,h:48}]}
+	global const Image microphoneIcon = {"microphoneIcon", "lib/core/play/media/microphoneIcon.png", atlas, {52,52}, [{x1:682,y1:562,x2:730,y2:610,w:48,h:48}]}
+	global const Image New = {"New", "lib/core/play/media/New.png", atlas, {52,52}, [{x1:734,y1:562,x2:782,y2:610,w:48,h:48}]}
+	global const Image Quit = {"Quit", "lib/core/play/media/Quit.png", atlas, {52,52}, [{x1:786,y1:562,x2:834,y2:610,w:48,h:48}]}
+	global const Image Save = {"Save", "lib/core/play/media/Save.png", atlas, {52,52}, [{x1:446,y1:614,x2:494,y2:662,w:48,h:48}]}
+	global const Image settingsIcon = {"settingsIcon", "lib/core/play/media/settingsIcon.png", atlas, {52,52}, [{x1:498,y1:614,x2:546,y2:662,w:48,h:48}]}
+	global const Image speakerIcon = {"speakerIcon", "lib/core/play/media/speakerIcon.png", atlas, {52,52}, [{x1:602,y1:614,x2:650,y2:662,w:48,h:48}]}
+	global const Image starParticle = {"starParticle", "lib/core/play/media/starParticle2.png", atlas, {52,48}, [{x1:828,y1:518,x2:854,y2:542,w:26,h:24},{x1:855,y1:262,x2:865,y2:272,w:10,h:10},{x1:654,y1:614,x2:702,y2:658,w:48,h:44}]}
+	global const Image Tutorial = {"Tutorial", "lib/core/play/media/Tutorial.png", atlas, {52,52}, [{x1:446,y1:666,x2:494,y2:714,w:48,h:48}]}
 	global const Image[] Flag = [{"Flag", "lib/core/play/media/Flag-Language1-State0.png", atlas, {37,25}, [{x1:654,y1:437,x2:686,y2:458,w:32,h:21},{x1:690,y1:437,x2:722,y2:458,w:32,h:21}]},{"Flag", "lib/core/play/media/Flag-Language1-State0.png", atlas, {37,25}, [{x1:832,y1:392,x2:865,y2:413,w:33,h:21},{x1:617,y1:437,x2:650,y2:458,w:33,h:21}]}]
-	global const Image ResizeHandle = {"ResizeHandle", "lib/core/play/media/ResizeHandle.png", atlas, {36,36}, [{x1:810,y1:562,x2:842,y2:594,w:32,h:32}]}
+	global const Image ResizeHandle = {"ResizeHandle", "lib/core/play/media/ResizeHandle.png", atlas, {36,36}, [{x1:828,y1:482,x2:860,y2:514,w:32,h:32}]}
 
 
 class Font
