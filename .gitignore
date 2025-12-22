@@ -1,10 +1,15 @@
+# General
 .DS_Store
-*~lock~
-*.state
-src/AGENTS.md
-.cursor/rules/livetime.mdc
-.github/copilot-instructions.md
+*.eventstream
 .livetime/symbolStates.tsv
+*~lock~*
+logs/
+
+# Agents
+.agent/rules/livetime.md
+.cursor/rules/livetime.mdc
+.github/instructions/livetime.instructions.md
+
+# Build
 assets/index.html
 assets/main-v*
-logs/
