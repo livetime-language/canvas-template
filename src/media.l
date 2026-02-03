@@ -1,4 +1,4 @@
-class Image
+media
 	const Texture atlas = {"atlas-v1.png", size:{1024,1024}}
 	global const Image VideoScreen = {"VideoScreen", "lib/core/play/media/VideoScreen0.png", atlas, {444,444}, [{x1:2,y1:2,x2:442,y2:332,w:440,h:330},{x1:2,y1:336,x2:442,y2:776,w:440,h:440}]}
 	global const Image LargeButton = {"LargeButton", "lib/core/play/media/LargeButton.png", atlas, {427,65}, [{x1:446,y1:2,x2:869,y2:63,w:423,h:61}]}
@@ -28,17 +28,14 @@ class Image
 	global const Image[] Flag = [{"Flag", "lib/core/play/media/Flag-Language1-State0.png", atlas, {37,25}, [{x1:654,y1:437,x2:686,y2:458,w:32,h:21},{x1:690,y1:437,x2:722,y2:458,w:32,h:21}]},{"Flag", "lib/core/play/media/Flag-Language1-State0.png", atlas, {37,25}, [{x1:832,y1:392,x2:865,y2:413,w:33,h:21},{x1:617,y1:437,x2:650,y2:458,w:33,h:21}]}]
 	global const Image ResizeHandle = {"ResizeHandle", "lib/core/play/media/ResizeHandle.png", atlas, {36,36}, [{x1:828,y1:482,x2:860,y2:514,w:32,h:32}]}
 
-
-class Font
 	global const Font ByTheWay = {"ByTheWay", "ByTheWay.woff2"}
 	global const Font OpenSans = {"OpenSans", "OpenSans.woff2"}
 	global const Font ShadowedSerif = {"ShadowedSerif", "ShadowedSerif.woff2"}
 
-transient unit Platform
-	js void openMedia: void() callback
-		Promise.all([$Image.atlas.open(),Font.ByTheWay.open(),Font.OpenSans.open(),Font.ShadowedSerif.open()]).then(() => callback())
-	cpp void openMedia
-		Image::atlas->open();
-		Font::ByTheWay->open();
-		Font::OpenSans->open();
-		Font::ShadowedSerif->open();
+	internal js void openMedia: void() callback
+		Promise.all([media.atlas.open(),media.ByTheWay.open(),media.OpenSans.open(),media.ShadowedSerif.open()]).then(() => callback())
+	internal cpp void openMedia
+		media::atlas->open();
+		media::ByTheWay->open();
+		media::OpenSans->open();
+		media::ShadowedSerif->open();

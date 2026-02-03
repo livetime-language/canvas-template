@@ -1,7 +1,9 @@
 {
-	"liveCompilation": true,
-	"currentTarget": "Web",
-	"buildTargets": [
-		"Web"
-	]
+  "liveCompilation": true,
+  "currentTarget": "Web",
+  "buildTargets": [
+    "Web"
+  ],
+  "runApplicationInWebview": false,
+  "runApplicationInBrowser": true
 }
