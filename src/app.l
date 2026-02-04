@@ -1,7 +1,7 @@
 app
 	// Called when the game starts
 	start
-		graphics.drawingOrder = ItemsDrawnFirstWillBeInTheBack
+		graphics.drawingOrder = LastDrawnWillBeInFront
 		Menu()
 		
 	// Called on every frame (30 times per second)
