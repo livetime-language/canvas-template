@@ -1,1 +1,1 @@
-Template for a 2D game
+Template for an 2D game using a canvas for rendering 
