@@ -6,8 +6,12 @@ app
 		
 	// Called on every frame (30 times per second)
 	tick
-		drawImage LiveTimeLogo, {0,-55}
-		drawText "Hello World", {0, 55}
+		drawImage LiveTimeLogo, {0, -120}
+		drawText "LiveTime Game Template", {0, 0}
+
+		drawStandardButton "Start", {0, 120}
+			print "Start button clicked by {touch.by}"
+
 		players.each.tick
 		
 Player
