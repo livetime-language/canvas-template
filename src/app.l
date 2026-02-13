@@ -18,29 +18,29 @@ Player
 	Vector2 pos = IntVector2.horizontalDirections[index] * {690,265}
 	
 	onTouchHover: Touch touch
-		print "{this} hovered at {touch.position}" type:Event
+		print "Hover at {touch.position} by {this}" type:Event
 	
 	onTouchDown: Touch touch
-		print "{this} clicked at {touch.position}" type:Event
+		print "Click at {touch.position} by {this}" type:Event
 	
 	onTouchDrag: Touch touch
-		print "{this} draged to {touch.position}" type:Event
+		print "Drag to {touch.position} by {this}" type:Event
 	
 	onTouchUp: Touch touch
-		print "{this} released at {touch.position}" type:Event
+		print "Release at {touch.position} by {this}" type:Event
 
 	onKeyDown: Key key, string character
-		print "{this} pressed {key} ({character})" type:Event
+		print "{key} ({character}) pressed by {this}" type:Event
 
 	onKeyUp: Key key
-		print "{this} released {key}" type:Event
+		print "{key} released by {this}" type:Event
 		
 	tick
 		if gameController.leftStick.magnitude > .1
-			print "{this} moved left stick to {gameController.leftStick}" type:Event
+			print "Left stick moved to {gameController.leftStick} by {this}" type:Event
 
 		if gameController.a.wasJustPressed
-			print "{this} just pressed the A button on their game controller" type:Event
+			print "A button just pressed by {this}" type:Event
 
 		// Draw the player's video feed in a circle
 		float radius = 255
