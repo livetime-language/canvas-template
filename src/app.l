@@ -39,8 +39,8 @@ Player
 		if gameController.leftStick.magnitude > .1
 			print "Left stick moved to {gameController.leftStick} by {this}" type:Event
 
-		if gameController.a.wasJustPressed
-			print "A button just pressed by {this}" type:Event
+		if gameController.A.wasJustPressed
+			print "Button A just pressed by {this}" type:Event
 
 		// Draw the player's video feed in a circle
 		float radius = 255
