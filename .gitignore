@@ -6,9 +6,11 @@
 logs/
 
 # Agents
-.agent/rules/livetime.md
+.agents/rules/livetime.md
 .cursor/rules/livetime.mdc
 .github/instructions/livetime.instructions.md
+.kiro/steering/livetime.md
+.windsurf/rules/livetime.md
 
 # Build
 assets/index.html
