@@ -11,6 +11,7 @@ logs/
 .github/instructions/livetime.instructions.md
 .kiro/steering/livetime.md
 .windsurf/rules/livetime.md
+.claude/skills
 
 # Build
 assets/index.html
