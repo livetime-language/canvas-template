@@ -1,21 +1,27 @@
 app
+	Player currentPlayer
+
 	// Called when the game starts
 	start
-		graphics.drawingOrder = LastDrawnWillBeInFront
 		Menu()
+		graphics.drawingOrder = LastDrawnWillBeInFront
+		currentPlayer = players.random
 		
 	// Called on every frame (30 times per second)
 	tick
-		drawImage LiveTimeLogo, {0, -120}
-		drawText "LiveTime Game Template", {0, 0}
+		drawImage LiveTimeLogo, {0, -64}
+		drawText "LiveTime Game Template", {0, 64}
 
-		drawStandardButton "Start", {0, 120}
+		drawStandardButton "Start", {0, 450}
 			print "Start button clicked by {touch.by}"
 
 		players.each.tick
 		
 Player
-	Vector2 pos = IntVector2.horizontalDirections[index] * {690,265}
+	const speed = 16
+
+	Vector2 videoPos = {IntVector2.horizontalDirections[index].x * 690, 0}
+	Vector2 pos = {IntVector2.horizontalDirections[index].x * 128, -64}
 	
 	onTouchHover: Touch touch
 		print "Hover at {touch.position} by {this}"
@@ -34,21 +40,25 @@ Player
 
 	onKeyUp: Key key
 		print "{key} released by {this}"
+
+	// Called on every frame (30 times per second) if a game controller is connected
+	onGameController: GameController controller
+		pos += controller.leftStick * speed
+
+		if controller.A.wasJustPressed
+			print "Button {controller.A.name} just pressed by {this}"
 		
 	tick
-		if gameController.leftStick.magnitude > .1
-			print "Left stick moved to {gameController.leftStick} by {this}"
-
-		if gameController.A.wasJustPressed
-			print "Button A just pressed by {this}"
+		drawCircle pos, color, size:64
 
 		// Draw the player's video feed in a circle
 		float radius = 255
-		drawCircle pos, size:radius*2, outlineColor:color, outlineWidth:12
-		drawVideo me, pos, size:radius*2-75, shape:Circle
+		Color outlineColor = app.currentPlayer == this ? color : darkColor
+		drawCircle videoPos, size:radius*2, outlineColor, outlineWidth:12
+		drawVideo me, videoPos, size:radius*2-75, shape:Circle
 
 		// Draw the player's score
-		Vector2 scorePos = pos + math.getVectorForAngle(.125 turn)*radius
-		drawCircle scorePos, color:Black, outlineColor:color, size:60
+		Vector2 scorePos = videoPos + math.getVectorForAngle(.125 turn)*radius
+		drawCircle scorePos, color:Black, outlineColor, size:60
 		drawText score, scorePos, size:31
 		
