@@ -9,11 +9,12 @@ app
 		
 	// Called on every frame (30 times per second)
 	tick
-		drawImage LiveTimeLogo, {0, -64}
-		drawText "LiveTime Game Template", {0, 64}
+		drawImage LiveTimeLogo, {0, -180}
+		drawText "LiveTime Game Template", {0, 0}
 
-		drawStandardButton "Start", {0, 450}
-			print "Start button clicked by {touch.by}"
+		drawStandardButton "Swap places", {0, 128}
+			players[0].pos swapWith players[1].pos
+			print "Player positions swapped by {touch.by}"
 
 		players.each.tick
 		
@@ -21,7 +22,7 @@ Player
 	const speed = 16
 
 	Vector2 videoPos = {IntVector2.horizontalDirections[index].x * 690, 0}
-	Vector2 pos = {IntVector2.horizontalDirections[index].x * 128, -64}
+	Vector2 pos = {IntVector2.horizontalDirections[index].x * 128, -128}
 	
 	onTouchHover: Touch touch
 		print "Hover at {touch.position} by {this}"

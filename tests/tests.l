@@ -1,5 +1,8 @@
 tests
-	startButtonShouldPrintStartButtonClicked
-		click {0, 120} by bluePlayer
-		expectToPrint "Start button clicked by {bluePlayer}"
+	swapPlacesButtonShouldSwapPlayerPositions
+		let prevBluePlayerPos = bluePlayer.pos
+		let prevRedPlayerPos = redPlayer.pos
+		click {0, 128} by bluePlayer
+		expect bluePlayer.pos == prevRedPlayerPos
+		expect redPlayer.pos == prevBluePlayerPos
 		
