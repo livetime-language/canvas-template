@@ -6,15 +6,28 @@ app
 		Menu()
 		graphics.drawingOrder = LastDrawnWillBeInFront
 		currentPlayer = players.random
+
+	onTouchHover: Touch touch
+		print "Hover at {touch.position} by {touch.by}" type:Action
+	
+	onTouchDown: Touch touch
+		print "Click at {touch.position} by {touch.by}" type:Action
+	
+	onTouchDrag: Touch touch
+		print "Drag to {touch.position} by {touch.by}" type:Action
+	
+	onTouchUp: Touch touch
+		print "Release at {touch.position} by {touch.by}" type:Action
 		
 	// Called on every frame (30 times per second)
 	tick
 		drawImage LiveTimeLogo, {0, -180}
 		drawText "LiveTime Game Template", {0, 0}
 
-		drawStandardButton "Swap places", {0, 128}
+		drawStandardButton "Swap", {0, 128}
+			print "Swap button clicked by {touch.by}" type:Action
 			players[0].pos swapWith players[1].pos
-			print "Player positions swapped by {touch.by}"
+			print "Positions swapped, player 0: {players[0].pos}, player 1: {players[1].pos}" type:Reaction
 
 		players.each.tick
 		
@@ -24,30 +37,18 @@ Player
 	Vector2 videoPos = {IntVector2.horizontalDirections[index].x * 690, 0}
 	Vector2 pos = {IntVector2.horizontalDirections[index].x * 128, -128}
 	
-	onTouchHover: Touch touch
-		print "Hover at {touch.position} by {this}"
-	
-	onTouchDown: Touch touch
-		print "Click at {touch.position} by {this}"
-	
-	onTouchDrag: Touch touch
-		print "Drag to {touch.position} by {this}"
-	
-	onTouchUp: Touch touch
-		print "Release at {touch.position} by {this}"
-
 	onKeyDown: Key key, string character
-		print "{key} ({character}) pressed by {this}"
+		print "{key} ({character}) pressed by {this}" type:Action
 
 	onKeyUp: Key key
-		print "{key} released by {this}"
+		print "{key} released by {this}" type:Action
 
 	// Called on every frame (30 times per second) if a game controller is connected
 	onGameController: GameController controller
 		pos += controller.leftStick * speed
 
 		if controller.A.wasJustPressed
-			print "Button {controller.A.name} just pressed by {this}"
+			print "Button {controller.A.name} just pressed by {this}" type:Action
 		
 	tick
 		drawCircle pos, color, size:64
