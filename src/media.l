@@ -1,5 +1,5 @@
 immutable media
-	const Texture atlas = {"atlas-v3.png", size:{1024,1024}}
+	const Texture atlas = {"atlas-v4.png", size:{1024,1024}}
 	global const Image VideoScreen = {"VideoScreen", "lib/core/play/media/VideoScreen0.png", atlas, {444,444}, [{x1:2,y1:2,x2:442,y2:332,w:440,h:330},{x1:2,y1:336,x2:442,y2:776,w:440,h:440}]}
 	global const Image LargeButton = {"LargeButton", "lib/core/play/media/LargeButton.png", atlas, {427,65}, [{x1:446,y1:2,x2:869,y2:63,w:423,h:61}]}
 	global const Image LargeButtonAccent = {"LargeButtonAccent", "lib/core/play/media/LargeButtonAccent1.png", atlas, {427,65}, [{x1:446,y1:132,x2:868,y2:193,w:422,h:61},{x1:446,y1:67,x2:869,y2:128,w:423,h:61}]}

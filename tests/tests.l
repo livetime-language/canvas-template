@@ -1,8 +1,8 @@
 tests
 	swapPlacesButtonShouldSwapPlayerPositions
-		let prevBluePlayerPos = bluePlayer.pos
-		let prevRedPlayerPos = redPlayer.pos
-		click {0, 128} by bluePlayer
-		expect bluePlayer.pos == prevRedPlayerPos
-		expect redPlayer.pos == prevBluePlayerPos
+		let prevBluePlayerPos = players[0].pos
+		let prevRedPlayerPos = players[1].pos
+		click {0, 128} by players[0]
+		expect players[0].pos == prevRedPlayerPos
+		expect players[1].pos == prevBluePlayerPos
 		
