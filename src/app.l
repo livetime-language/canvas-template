@@ -34,8 +34,8 @@ app
 Player
 	const speed = 16
 
-	Vector2 videoPos = {IntVector2.horizontalDirections[index].x * 690, 0}
-	Vector2 pos = {IntVector2.horizontalDirections[index].x * 128, -128}
+	Vector2 videoPos = {IntVector2.horizontalDirections[playerIndex].x * 690, 0}
+	Vector2 pos = {IntVector2.horizontalDirections[playerIndex].x * 128, -128}
 	
 	onKeyDown: Key key, string character
 		print "{key} ({character}) pressed by {this}", type:Action
@@ -51,16 +51,16 @@ Player
 			print "Button {controller.A.name} just pressed by {this}", type:Action
 		
 	tick
-		drawCircle pos, color, size:64
+		drawCircle pos, playerColor, size:64
 
 		// Draw the player's video feed in a circle
 		float radius = 255
-		Color outlineColor = app.currentPlayer == this ? color : darkColor
+		Color outlineColor = app.currentPlayer == this ? playerColor : playerDarkColor
 		drawCircle videoPos, size:radius*2, outlineColor, outlineWidth:12
 		drawVideo me, videoPos, size:radius*2-75, shape:Circle
 
 		// Draw the player's score
 		Vector2 scorePos = videoPos + math.getVectorForAngle(.125 turn)*radius
 		drawCircle scorePos, color:Black, outlineColor, size:60
-		drawText score, scorePos, size:31
+		drawText playerScore, scorePos, size:31
 		
