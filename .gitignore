@@ -1,9 +1,10 @@
 # General
 .DS_Store
+node_modules/
+logs/
 *.eventstream
 .livetime/symbolStates.tsv
 *~lock~*
-logs/
 
 # Agents
 .agents/rules/livetime.md

@@ -1,0 +1,14 @@
+{
+  "name": "canvas-template",
+  "version": "1.0.0",
+  "description": "LiveTime template for an 2D game using a canvas for rendering",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "main": "assets/index.html",
+  "scripts": {
+    "compile": "livetime compile"
+  },
+  "devDependencies": {
+    "@livetime/compiler": "file:C:/Projects/LiveTime/dist/compiler"
+  }
+}
