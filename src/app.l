@@ -5,7 +5,7 @@ app
 	start
 		Menu()
 		graphics.drawingOrder = LastDrawnWillBeInFront
-		currentPlayer = players.random
+		currentPlayer = input.players.random
 
 	onTouchHover: Touch touch
 		print "Hover at {touch.position} by {touch.by}", type:Action
@@ -26,10 +26,10 @@ app
 
 		drawStandardButton "Swap", {0, 128}
 			print "Swap button clicked by {touch.by}", type:Action
-			players[0].pos swapWith players[1].pos
-			print "Positions swapped, player 0: {players[0].pos}, player 1: {players[1].pos}", type:Reaction
+			input.players[0].pos swapWith input.players[1].pos
+			print "Positions swapped, player 0: {input.players[0].pos}, player 1: {input.players[1].pos}", type:Reaction
 
-		players.each.tick
+		input.players.each.tick
 		
 Player
 	const speed = 16

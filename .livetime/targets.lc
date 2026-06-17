@@ -4,6 +4,8 @@ Common
 	Technology: Web
 	Rendering: 2D
 	UserCount: 2
+	CopyAgentRulesTo: AGENTS.md
+	CopyAgentSkillsTo: -
 
 Web
 	Platform: Web

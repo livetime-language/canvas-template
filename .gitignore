@@ -13,6 +13,7 @@ logs/
 .kiro/steering/livetime.md
 .windsurf/rules/livetime.md
 .claude/skills
+AGENTS.md
 
 # Build
 assets/index.html
